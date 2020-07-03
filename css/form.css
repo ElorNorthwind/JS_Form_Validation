@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: rgb(68, 74, 83);
+    background: linear-gradient(180deg, rgb(68, 74, 83) 42%,   rgb(195, 204, 216) 42%);
+}
+
+.wrapper {
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    margin: 0 auto;
+    width: 350px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    font-family: sans-serif;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+
+.wrapper > * {
+    margin-bottom: 1.5rem;
+}
+
+
+.wrapper > h1 {
+    margin: 0 auto;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: rgb(71, 112, 151);
+}
+
+.wrapper > p {
+    margin: 0 auto 2rem auto;
+    font-size: 1.2rem;
+    color: rgb(143, 152, 165);
+}
+
+
+.field {
+    position: relative;
+    height: 3rem;
+    width: 100%;
+    overflow: hidden;
+    /* margin-bottom: 1rem; */
+}
+
+.field__input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: 1.5rem;
+    border: none;
+    outline: none;
+    /* background: rgba(117, 133, 228, 0.267); */
+
+}
+
+.field__input::placeholder {
+   opacity: 0;
+}
+
+.field__label {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+    /* background: rgba(236, 126, 126, 0.267); */
+}
+
+.field__label::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 3px solid rgb(71, 112, 151);
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+    /* background: rgba(236, 126, 126, 0.267); */
+}
+
+
+
+.field__content {
+    position: absolute;
+    top: 1.5rem;
+    transition: all 0.4s ease;
+}
+
+
+
+.field__input:focus + .field__label .field__content,
+/* .field__input:valid + .field__label .field__content, */
+.field__input:not(:placeholder-shown) + .field__label .field__content {
+    transform: translateY(-1.5rem);
+    font-size: 0.95rem;
+    color: rgb(71, 112, 151);
+}
+
+.field__input:focus + .field__label::after,
+.field__input:not(:placeholder-shown) + .field__label::after {
+    transform: translateX(0);
+}
+
+.field__input:focus + .field__label .field__content {
+    color: rgb(102, 148, 190);
+}
+
+
+.field__input:focus + .field__label::after {
+    border-bottom: 3px solid #6694be;
+}
+
+.field__input:focus {
+    color: rgb(102, 148, 190);
+    background: linear-gradient(180deg, rgba(102,148,190,0) 45%, rgba(102,148,190,0.1) 45%);
+
+ }
+
+ .btn-submit {
+     border: none;
+     background-color: rgb(102, 148, 190);
+     padding: 0.5rem;
+     color: white;
+     outline: none;
+ }
+
+ .btn-submit:focus {
+    border: 2px solid rgb(89, 126, 160);
+    padding: calc(0.5rem - 2px) ;
+
+}
