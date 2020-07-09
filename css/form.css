@@ -26,9 +26,7 @@ body {
     border-radius: 3px;
 }
 
-.wrapper > * {
-    margin-bottom: 1.5rem;
-}
+
 
 
 .wrapper > h1 {
@@ -40,18 +38,23 @@ body {
 }
 
 .wrapper > p {
-    margin: 0 auto 2rem auto;
-    font-size: 1.2rem;
+    margin: 0 auto 1rem auto;
+    font-size: 1.3rem;
     color: rgb(143, 152, 165);
 }
 
+.wrapper > i {
+    margin: 0 auto 20px auto;
+    font-size: 150px;
+    color: rgb(71, 112, 151);
+}
 
 .field {
     position: relative;
     height: 3rem;
     width: 100%;
     overflow: hidden;
-    /* margin-bottom: 1rem; */
+     margin-bottom: 2.2rem; 
 }
 
 .field__input {
@@ -80,7 +83,7 @@ body {
     /* background: rgba(236, 126, 126, 0.267); */
 }
 
-.field__label::after {
+.field__label::before {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -111,8 +114,8 @@ body {
     color: rgb(71, 112, 151);
 }
 
-.field__input:focus + .field__label::after,
-.field__input:not(:placeholder-shown) + .field__label::after {
+.field__input:focus + .field__label::before,
+.field__input:not(:placeholder-shown) + .field__label::before {
     transform: translateX(0);
 }
 
@@ -121,7 +124,7 @@ body {
 }
 
 
-.field__input:focus + .field__label::after {
+.field__input:focus + .field__label::before {
     border-bottom: 3px solid #6694be;
 }
 
@@ -143,4 +146,29 @@ body {
     border: 2px solid rgb(89, 126, 160);
     padding: calc(0.5rem - 2px) ;
 
+}
+
+.field__label::after{
+    content: '\f00c';
+    font-family: FontAwesome;
+    position: absolute;
+    right: 0.3rem;
+    top: 1.6rem;
+    color: rgba(89, 126, 160, 0);
+    transition: all 0.4s ease;
+}
+
+.valid > .field__label::after{
+    color: rgb(89, 126, 160);
+}
+
+.entry {
+  position: relative;
+}
+
+.entry__message {
+ position: absolute;
+ color: #40100d;
+ font-size: 0.8rem;
+ top: 3.2rem;
 }

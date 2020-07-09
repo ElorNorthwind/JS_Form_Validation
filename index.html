@@ -6,33 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form validation test</title>
     <link rel="stylesheet" href="css/form.css">
-    <script deter src="js/form.js"></script>
+
 </head>
 
 <body>
 
 
     <form class='wrapper' action="#" method="GET">
-
+        <i class="fas fa-user-astronaut"></i>
         <h1>Welcome</h1>
         <p>Do you really need to be here?</p>
 
-        <div class='field'>
-            <input type="text" id='login' name='login' class='field__input' autocomplete='off'  placeholder='login' required>
-            <label for="login" class='field__label'><span class='field__content'>Login</span></label>
-            <span class='field__message'></span>
+        <div class='entry'>
+          <div class='field'>
+              <input type="text" id='login' name='login' class='field__input' autocomplete='off'  placeholder='login' required>
+              <label for="login" class='field__label'><span class='field__content'>Login</span></label>
+          </div>
+        <span class = 'entry__message'></span>
         </div>
-
-        <div class='field'>
-            <input type="password" id='password' name='password' class='field__input' placeholder='password'>
-            <label for="password" class='field__label'><span class='field__content' >Password</span></label>
-            <span class='field__message'></span>
+      
+        <div class='entry'>
+          <div class='field'>
+              <input type="password" id='password' name='password' class='field__input' placeholder='password' required>
+              <label for="password" class='field__label'><span class='field__content' >Password</span></label>
+          </div>
+        <span class = 'entry__message'></span>
         </div>
 
         <button class='btn-submit' type="submit">Submit</button>
 
     </form>
 
+
+
+<script src="https://kit.fontawesome.com/841e5a7f4f.js" crossorigin="anonymous"></script>
+<script src="js/form.js"></script>
 
 
 </body>
